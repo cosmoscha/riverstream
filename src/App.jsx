@@ -12,16 +12,11 @@ import RouteWrapper from "./components/RouteWrapper";
 
 const App = () => {
     const { isDarkMode } = useTheme();
-
     return (
         <Router>
-            {/* Apply dark class globally */}
             <div className={`${isDarkMode ? "dark" : ""}`}>
                 <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 ease-in-out">
-                    {/* Navbar */}
                     <Navbar />
-
-                    {/* Main Content */}
                     <main className="flex-grow flex items-center justify-center">
                         <RouteWrapper>
                             <Routes>
@@ -32,11 +27,7 @@ const App = () => {
                             </Routes>
                         </RouteWrapper>
                     </main>
-
-                    {/* Footer */}
                     <Footer />
-
-                    {/* Theme Toggle Button */}
                     <ThemeToggleButton />
                 </div>
             </div>
