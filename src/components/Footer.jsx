@@ -8,13 +8,28 @@ const Footer = () => {
                     © 2024 <span className="font-semibold">MyDevSite</span> | Built with React & Tailwind
                 </p>
                 <div className="flex justify-center gap-4 mt-2">
-                    <a href="https://github.com" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+                    <a
+                        href="https://github.com/cosmoscha"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+                    >
                         GitHub
                     </a>
-                    <a href="https://linkedin.com" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+                    <a
+                        href="https://linkedin.com/in/river-cha"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+                    >
                         LinkedIn
                     </a>
-                    <a href="mailto:your.email@example.com" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+                    <a
+                        href="mailto:cosmos.cha1997@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+                    >
                         Email
                     </a>
                 </div>
