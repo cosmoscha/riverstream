@@ -13,23 +13,22 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`fixed top-0 left-0 h-screen bg-white dark:bg-gray-900
+      className={`fixed top-0 left-0 h-screen z-30
         transition-all duration-300 ease-in-out flex flex-col
+        backdrop-blur-md bg-white/30 dark:bg-gray-900/30
         ${isExpanded ? 'w-64' : 'w-16'}`}
-      style={{
-        boxShadow: '0px 0 30px rgba(0,0,0,0.1)'
-      }}
     >
       {/* Hamburger Menu */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="absolute -right-10 top-4 p-2 bg-white dark:bg-gray-900 rounded-r-lg
-          shadow-lg border-r border-t border-b border-gray-200 dark:border-gray-700"
+        className="absolute -right-10 top-4 p-2 backdrop-blur-md
+          bg-white/30 dark:bg-gray-900/30 rounded-r-lg
+          border-r border-t border-b border-white/20 dark:border-gray-700/50"
       >
         <div className="space-y-1.5">
-          <span className="block w-6 h-0.5 bg-gray-600 dark:bg-gray-300"></span>
-          <span className="block w-6 h-0.5 bg-gray-600 dark:bg-gray-300"></span>
-          <span className="block w-6 h-0.5 bg-gray-600 dark:bg-gray-300"></span>
+          <span className="block w-6 h-0.5 bg-gray-800 dark:bg-gray-200"></span>
+          <span className="block w-6 h-0.5 bg-gray-800 dark:bg-gray-200"></span>
+          <span className="block w-6 h-0.5 bg-gray-800 dark:bg-gray-200"></span>
         </div>
       </button>
 
@@ -43,21 +42,6 @@ const Sidebar = () => {
         </Link>
       </div>
 
-      {/* Search Bar - Only visible when expanded */}
-      {isExpanded && (
-        <div className="px-4 mb-6">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full px-4 py-2 rounded-lg bg-blue-600 text-white placeholder-white/70
-                focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-            <span className="absolute right-3 top-2.5 text-white">🔍</span>
-          </div>
-        </div>
-      )}
-
       {/* Navigation Items */}
       <nav className="flex-1">
         <ul className="px-2">
@@ -69,8 +53,8 @@ const Sidebar = () => {
                   to={item.path}
                   className={`flex items-center px-3 py-3 rounded-lg transition-all duration-300
                     ${isActive
-                      ? 'bg-blue-600 text-white'
-                      : 'text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-400'}
+                      ? 'bg-blue-600/80 text-white'
+                      : 'text-gray-800 hover:bg-white/20 dark:text-gray-100 dark:hover:bg-gray-800/50'}
                     ${isExpanded ? 'pr-6' : 'justify-center'}`}
                 >
                   <span className="text-xl">{item.icon}</span>
