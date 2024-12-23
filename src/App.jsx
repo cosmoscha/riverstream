@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -16,7 +17,7 @@ const App = () => {
         <Router>
             <div className={`${isDarkMode ? "dark" : ""}`}>
                 <div className="flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 ease-in-out">
-                    <Navbar />
+                    <Sidebar />
                     <main className="flex-grow flex items-center justify-center">
                         <RouteWrapper>
                             <Routes>
