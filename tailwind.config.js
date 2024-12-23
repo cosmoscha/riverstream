@@ -8,15 +8,17 @@ export default {
   theme: {
     extend: {
       animation: {
-        'tree-sway': 'tree-sway 8s ease-in-out infinite',
-        'sway': 'sway 4s ease-in-out infinite',
-        'petal-sway': 'petal-sway 3s ease-in-out infinite',
-        'grass-sway': 'grass-sway 3s ease-in-out infinite',
-        'cloud-drift': 'cloud-drift 30s linear infinite',
-        'sun-pulse': 'sun-pulse 4s ease-in-out infinite',
-        'sun-glow': 'sun-glow 6s ease-in-out infinite',
-        'spin-slow': 'spin 12s linear infinite',
-        'twinkle': 'twinkle 4s ease-in-out infinite'
+        'sway': 'sway 3s ease-in-out infinite',
+        'sway-gentle': 'sway-gentle 3s ease-in-out infinite',
+        'sway-slow': 'sway-slow 4s ease-in-out infinite',
+        'sway-medium': 'sway-medium 3.5s ease-in-out infinite',
+        'grass-sway': 'grass-sway 2s ease-in-out infinite',
+        'cloud-drift': 'cloud-drift 60s linear infinite',
+        'sun-pulse': 'sun-pulse 3s ease-in-out infinite',
+        'sun-glow': 'sun-glow 4s ease-in-out infinite',
+        'spin-slow': 'spin-slow 12s linear infinite',
+        'twinkle': 'twinkle 4s ease-in-out infinite',
+        'tree-sway': 'tree-sway 4s ease-in-out infinite',
       },
       keyframes: {
         'twinkle': {

@@ -24,7 +24,7 @@ const App = () => {
 
                     <main className={styles.layout.mainContent}>
                         <div className={styles.layout.contentContainer}>
-                            <div className="flex items-center justify-center">
+                            <div className="flex items-center justify-center h-[calc(100vh-8rem)]">
                                 <Routes>
                                     <Route path="/" element={<Home />} />
                                     <Route path="/about" element={<About />} />
