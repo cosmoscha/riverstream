@@ -7,28 +7,24 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import { useTheme } from "./ThemeContext";
 import AnimatedBackground from "./components/AnimatedBackground";
+import { styles } from "./styles/common";
 
 const App = () => {
     const { isDarkMode } = useTheme();
+
     return (
         <Router>
             <div className={`${isDarkMode ? "dark" : ""}`}>
-                {/* Background Layer */}
                 <div className="fixed inset-0 z-0">
                     <AnimatedBackground />
                 </div>
 
-                {/* Layout Container */}
                 <div className="relative min-h-screen flex bg-transparent">
-                    {/* Sidebar */}
                     <Sidebar />
 
-                    {/* Main Content Area */}
-                    <main className="flex-1 flex flex-col min-h-screen ml-16">
-                        {/* Content with padding for footer */}
-                        <div className="flex-grow py-16 px-4">
-                            {/* Centered content container */}
-                            <div className="flex items-center justify-center min-h-full">
+                    <main className={styles.layout.mainContent}>
+                        <div className={styles.layout.contentContainer}>
+                            <div className="flex items-center justify-center">
                                 <Routes>
                                     <Route path="/" element={<Home />} />
                                     <Route path="/about" element={<About />} />
@@ -36,8 +32,7 @@ const App = () => {
                                 </Routes>
                             </div>
                         </div>
-
-                        {/* Footer */}
+                        <div className="h-16"></div>
                         <Footer />
                     </main>
                 </div>
